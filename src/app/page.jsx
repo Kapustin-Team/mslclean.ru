@@ -552,15 +552,18 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Big Email */}
-              <div className={styles.footerEmailRow}>
-                <a href="mailto:info@mslclean.ru" className={styles.footerBigEmail}>
+              {/* Big Email + Phone */}
+              <div className={styles.footerContactRow}>
+                <a href="mailto:info@mslclean.ru" className={styles.footerBigContact}>
                   info@mslclean.ru
                 </a>
-                <div className={styles.footerSocial}>
-                  <Link href="#contact" className={styles.socialBtn}>Telegram</Link>
-                  <Link href="#contact" className={styles.socialBtn}>WhatsApp</Link>
-                </div>
+                <a href="tel:+79991234567" className={styles.footerBigContact}>
+                  +7 (999) 123-45-67
+                </a>
+              </div>
+              <div className={styles.footerSocialRow}>
+                <Link href="#contact" className={styles.socialBtn}>Telegram</Link>
+                <Link href="#contact" className={styles.socialBtn}>WhatsApp</Link>
               </div>
 
               {/* Bottom */}
