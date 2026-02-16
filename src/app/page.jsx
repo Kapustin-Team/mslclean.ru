@@ -201,10 +201,15 @@ export default function HomePage() {
         <section className={styles.heroSection}>
           <div className={styles.heroContainer}>
             {/* Image Card */}
-            <div className={styles.heroCard}>
+            <motion.div 
+              className={styles.heroCard}
+              initial={{ clipPath: 'inset(100% 0 0 0)' }}
+              animate={{ clipPath: 'inset(0% 0 0 0)' }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            >
               <Image 
                 src="/images/hero-bg.jpg"
-                alt="Современный офис"
+                alt="Интерьер ресторана"
                 fill
                 priority
                 className={styles.heroImage}
@@ -233,7 +238,7 @@ export default function HomePage() {
                   Связаться с нами
                 </Link>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -250,6 +255,25 @@ export default function HomePage() {
               </SplitText>
             </div>
           </div>
+        </section>
+
+        {/* ===================== BANNER ===================== */}
+        <section className={styles.bannerSection}>
+          <motion.div 
+            className={styles.bannerBkg}
+            initial={{ clipPath: 'inset(100% 0 0 0)' }}
+            whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <Image 
+              src="/images/banner-kitchen.jpg"
+              alt="Команда клининга за работой в ресторане"
+              fill
+              className={styles.bannerImage}
+            />
+            <div className={styles.bannerOverlay} />
+          </motion.div>
         </section>
 
         {/* ===================== PROBLEMS ===================== */}
@@ -396,7 +420,13 @@ export default function HomePage() {
             >
               {PORTFOLIO.map((item, index) => (
                 <SwiperSlide key={index} className={styles.portfolioSlide}>
-                  <div className={styles.portfolioCard}>
+                  <motion.div 
+                    className={styles.portfolioCard}
+                    initial={{ clipPath: 'inset(100% 0 0 0)' }}
+                    whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: index * 0.1 }}
+                  >
                     <div className={styles.portfolioImageWrapper}>
                       <Image 
                         src={item.image}
@@ -409,7 +439,7 @@ export default function HomePage() {
                     <div className={styles.portfolioCardInfo}>
                       <h4>{item.title}</h4>
                     </div>
-                  </div>
+                  </motion.div>
                 </SwiperSlide>
               ))}
             </Swiper>
