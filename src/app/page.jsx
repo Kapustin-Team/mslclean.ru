@@ -251,19 +251,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ===================== BANNER ===================== */}
-        <section className={styles.bannerSection}>
-          <div className={styles.bannerBkg}>
-            <Image 
-              src="/images/banner-kitchen.jpg"
-              alt="Чистая кухня ресторана"
-              fill
-              className={styles.bannerImage}
-            />
-            <div className={styles.bannerOverlay} />
-          </div>
-        </section>
-
         {/* ===================== PROBLEMS ===================== */}
         <section className={styles.problemsSection} id="problems">
           <div className={styles.sectionPadding}>
@@ -549,7 +536,7 @@ export default function HomePage() {
               {/* Bottom */}
               <div className={styles.footerBottom}>
                 <a href="#" className={styles.footerPolicy}>Политика конфиденциальности</a>
-                <span className={styles.footerCopyright}>MSL Clean © 2024. Все права защищены</span>
+                <span className={styles.footerCopyright}>MSL Clean © 2025. Все права защищены</span>
               </div>
             </div>
           </footer>

@@ -203,14 +203,14 @@
 
 /* ===================== SECTIONS COMMON ===================== */
 .sectionPadding {
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .sectionTop {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .tag {
@@ -1068,7 +1068,7 @@
   }
 
   .sectionPadding {
-    padding: 4rem 20px;
+    padding: 3rem 20px;
   }
 
   .problemsGrid {
