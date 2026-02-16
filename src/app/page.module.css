@@ -465,9 +465,7 @@
 }
 
 .uspCard:hover {
-  transform: translateY(-4px);
   border-color: var(--color-primary-light);
-  box-shadow: 0 10px 30px rgba(31, 88, 102, 0.1);
 }
 
 .uspIcon {
