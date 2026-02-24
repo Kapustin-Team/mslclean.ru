@@ -31,10 +31,10 @@ export default function Header() {
         
         <div className={styles.right}>
           <div className={styles.phone}>
-            <a href="tel:+78001234567" className={styles.phoneNumber}>
-              +7 (800) 123-45-67
+            <a href="tel:+79661155450" className={styles.phoneNumber}>
+              +7 (966) 115-54-50
             </a>
-            <span className={styles.phoneHint}>Работаем 24/7</span>
+            <span className={styles.phoneHint}>Работаем с 8:00 до 23:00</span>
           </div>
           <Button href="#contact" size="sm">
             Получить расчёт

@@ -16,7 +16,8 @@ const FOOTER_LINKS = {
     { href: '#', label: 'Вакансии' },
   ],
   contacts: [
-    { href: 'tel:+78001234567', label: '+7 (800) 123-45-67' },
+    { href: 'tel:+79661155450', label: '+7 (966) 115-54-50' },
+    { href: 'https://t.me/MSLClean', label: '@MSLClean (Telegram)' },
     { href: 'mailto:info@mslclean.ru', label: 'info@mslclean.ru' },
     { href: '#', label: 'Москва, ул. Примерная, 1' },
   ],

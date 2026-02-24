@@ -23,12 +23,12 @@ export default function CTASection() {
           
           <div className={styles.contacts}>
             <FeatureItem icon="Phone">
-              <a href="tel:+78001234567" className={styles.phone}>
-                +7 (800) 123-45-67
+              <a href="tel:+79661155450" className={styles.phone}>
+                +7 (966) 115-54-50
               </a>
             </FeatureItem>
             <FeatureItem icon="Clock">
-              Работаем круглосуточно, 24/7
+              Работаем с 8:00 до 23:00
             </FeatureItem>
           </div>
         </div>
