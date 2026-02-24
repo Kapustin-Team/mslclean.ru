@@ -122,8 +122,8 @@ export default function MobileMenu() {
               animate={{ opacity: 1, transition: { delay: 0.5 } }}
               exit={{ opacity: 0 }}
             >
-              <a href="tel:+79999999999">+7 (999) 999-99-99</a>
-              <span>Работаем 24/7</span>
+              <a href="tel:+79661155450">+7 (966) 115-54-50</a>
+              <span>Ежедневно 8:00–23:00</span>
             </motion.div>
           </motion.div>
         )}

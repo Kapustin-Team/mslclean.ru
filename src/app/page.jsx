@@ -186,8 +186,8 @@ export default function HomePage() {
             </div>
             <div className={styles.navRight}>
               <div className={styles.navPhone}>
-                <a href="tel:+79999999999">+7 (999) 999-99-99</a>
-                <span className={styles.navPhoneHint}>Пн-Пт 9:00–19:00</span>
+                <a href="tel:+79661155450">+7 (966) 115-54-50</a>
+                <span className={styles.navPhoneHint}>Ежедневно 8:00–23:00</span>
               </div>
               <Link href="#contact" className={styles.navButton}>
                 Получить расчёт
@@ -461,10 +461,10 @@ export default function HomePage() {
                   <h2>Давайте обсудим<br/>ваш проект</h2>
                   <p>Ответим в течение 10 минут</p>
                   <div className={styles.contactInfo}>
-                    <a href="tel:+79999999999" className={styles.contactPhone}>
-                      +7 (999) 999-99-99
+                    <a href="tel:+79661155450" className={styles.contactPhone}>
+                      +7 (966) 115-54-50
                     </a>
-                    <span className={styles.contactHint}>Пн-Пт 9:00–19:00</span>
+                    <span className={styles.contactHint}>Ежедневно 8:00–23:00</span>
                   </div>
                   <p className={styles.contactAlt}>Не любите звонить? Напишите на email</p>
                   <a href="mailto:info@mslclean.ru" className={styles.emailLink}>
@@ -537,8 +537,8 @@ export default function HomePage() {
                   <h5 className={styles.footerHeading}>Контакты</h5>
                   <div className={styles.footerAddress}>
                     <span>Москва, Россия</span>
-                    <a href="tel:+79999999999">+7 (999) 999-99-99</a>
-                    <span>Пн-Пт 9:00–19:00</span>
+                    <a href="tel:+79661155450">+7 (966) 115-54-50</a>
+                    <span>Ежедневно 8:00–23:00</span>
                   </div>
                 </div>
 
@@ -557,13 +557,13 @@ export default function HomePage() {
                 <a href="mailto:info@mslclean.ru" className={styles.footerBigContact}>
                   info@mslclean.ru
                 </a>
-                <a href="tel:+79991234567" className={styles.footerBigContact}>
-                  +7 (999) 123-45-67
+                <a href="tel:+79661155450" className={styles.footerBigContact}>
+                  +7 (966) 115-54-50
                 </a>
               </div>
               <div className={styles.footerSocialRow}>
-                <Link href="#contact" className={styles.socialBtn}>Telegram</Link>
-                <Link href="#contact" className={styles.socialBtn}>WhatsApp</Link>
+                <Link href="https://t.me/MSLClean" className={styles.socialBtn}>Telegram</Link>
+                <Link href="https://t.me/MSLClean" className={styles.socialBtn}>WhatsApp</Link>
               </div>
 
               {/* Bottom */}
