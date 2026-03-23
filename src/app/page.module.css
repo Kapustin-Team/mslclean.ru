@@ -1497,3 +1497,155 @@
     padding: 1rem 0;
   }
 }
+
+/* ===================== CASES SECTION ===================== */
+.casesSection {
+  background: #0a0a0a;
+  padding: 5rem 0;
+}
+
+.casesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.caseCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.caseCard:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.caseImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.caseImage {
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.caseCard:hover .caseImage {
+  transform: scale(1.05);
+}
+
+.caseImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+.caseType {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}
+
+.caseContent {
+  padding: 1.5rem;
+}
+
+.caseTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.caseProblem,
+.caseSolution {
+  margin-bottom: 0.75rem;
+}
+
+.caseProblemLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ef4444;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.caseSolutionLabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #22c55e;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.caseProblem p,
+.caseSolution p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.5;
+}
+
+.caseResults {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.caseResultItem {
+  flex: 1;
+  text-align: center;
+}
+
+.caseResultValue {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.caseResultLabel {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+  .casesGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .casesSection {
+    padding: 3rem 0;
+  }
+  .caseImageWrapper {
+    height: 180px;
+  }
+}

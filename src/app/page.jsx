@@ -233,13 +233,47 @@ const STEPS = [
   },
 ]
 
-const PORTFOLIO = [
-  { title: 'Фитнес-клуб Premium', image: '/images/portfolio-gym.jpg' },
-  { title: 'Ресторан Москва', image: '/images/portfolio-restaurant.jpg' },
-  { title: 'Бизнес-центр Сити', image: '/images/portfolio-office.jpg' },
-  { title: 'Сеть кафе Вкусно', image: '/images/portfolio-cafe.jpg' },
-  { title: 'Отель Люкс', image: '/images/portfolio-hotel.jpg' },
+const CASES = [
+  {
+    title: 'DDX Fitness',
+    type: 'Сеть фитнес-клубов',
+    image: '/images/case-ddx.jpg',
+    problem: 'Постоянная текучка клинеров, задержки с заменами, жалобы посетителей на чистоту',
+    solution: 'Вывели команду из 12 клинеров на 4 объекта. Закрепили менеджера за каждым клубом.',
+    results: [
+      { label: 'Объектов', value: '4' },
+      { label: 'Клинеров', value: '12' },
+      { label: 'Время замены', value: '2 ч' },
+    ],
+  },
+  {
+    title: 'Салатница',
+    type: 'Сеть ресторанов',
+    image: '/images/case-salatnica.jpg',
+    problem: 'Нестабильное качество уборки, проблемы с оформлением персонала, переплаты наличными',
+    solution: 'Перевели на аутстаффинг, стандартизировали процессы, внедрили контроль качества.',
+    results: [
+      { label: 'Точек', value: '6' },
+      { label: 'Экономия', value: '30%' },
+      { label: 'Жалоб', value: '0' },
+    ],
+  },
+  {
+    title: 'Национальный центр «Россия»',
+    type: 'ВДНХ, гастрономические ряды',
+    image: '/images/case-ncrussia.jpg',
+    problem: 'Масштабный объект с высоким трафиком, сложная логистика персонала',
+    solution: 'Организовали посменную работу 24/7, обеспечили бесперебойный клининг гастрономических рядов.',
+    results: [
+      { label: 'Площадь', value: '3000 м²' },
+      { label: 'Смены', value: '24/7' },
+      { label: 'Персонал', value: '8 чел' },
+    ],
+  },
 ]
+
+// Keep old PORTFOLIO for backward compat
+const PORTFOLIO = CASES
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -541,63 +575,52 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ===================== PORTFOLIO SLIDER ===================== */}
-        <section className={styles.portfolioSection} id="portfolio">
+        {/* ===================== CASES ===================== */}
+        <section className={styles.casesSection} id="portfolio">
           <div className={styles.sectionPadding}>
-            <div className={styles.portfolioTop}>
-              <div className={styles.portfolioInfo}>
-                <AnimatedTag>Клиенты</AnimatedTag>
-                <SplitText as="h2" delay={0.1}>Наши объекты и проекты</SplitText>
-              </div>
-              <div className={styles.sliderArrows}>
-                <button className={`${styles.sliderArrow} swiper-prev`}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M5 12l14 0M5 12l6 6M5 12l6-6"/>
-                  </svg>
-                </button>
-                <button className={`${styles.sliderArrow} swiper-next`}>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M5 12l14 0M13 18l6-6M13 6l6 6"/>
-                  </svg>
-                </button>
-              </div>
+            <div className={styles.sectionTop}>
+              <AnimatedTag>Кейсы</AnimatedTag>
+              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Наши клиенты и результаты</SplitText>
+              <SplitText as="p" className={styles.sectionSubtitle} delay={0.2}>Реальные объекты, реальные цифры</SplitText>
             </div>
 
-            <Swiper
-              modules={[Navigation]}
-              spaceBetween={30}
-              slidesPerView="auto"
-              navigation={{
-                prevEl: '.swiper-prev',
-                nextEl: '.swiper-next',
-              }}
-              className={styles.portfolioSlider}
-            >
-              {PORTFOLIO.map((item, index) => (
-                <SwiperSlide key={index} className={styles.portfolioSlide}>
-                  <motion.div 
-                    className={styles.portfolioCard}
-                    initial={{ clipPath: 'inset(100% 0 0 0)' }}
-                    whileInView={{ clipPath: 'inset(0% 0 0 0)' }}
-                    viewport={{ once: true, margin: '-50px' }}
-                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: index * 0.1 }}
-                  >
-                    <div className={styles.portfolioImageWrapper}>
+            <div className={styles.casesGrid}>
+              {CASES.map((item, index) => (
+                <CardReveal key={index} delay={index * 0.15}>
+                  <div className={styles.caseCard}>
+                    <div className={styles.caseImageWrapper}>
                       <Image 
                         src={item.image}
                         alt={item.title}
                         fill
-                        className={styles.portfolioImage}
+                        className={styles.caseImage}
                       />
-                      <div className={styles.portfolioImageOverlay} />
+                      <div className={styles.caseImageOverlay} />
+                      <div className={styles.caseType}>{item.type}</div>
                     </div>
-                    <div className={styles.portfolioCardInfo}>
-                      <h4>{item.title}</h4>
+                    <div className={styles.caseContent}>
+                      <h3 className={styles.caseTitle}>{item.title}</h3>
+                      <div className={styles.caseProblem}>
+                        <span className={styles.caseProblemLabel}>Проблема:</span>
+                        <p>{item.problem}</p>
+                      </div>
+                      <div className={styles.caseSolution}>
+                        <span className={styles.caseSolutionLabel}>Решение:</span>
+                        <p>{item.solution}</p>
+                      </div>
+                      <div className={styles.caseResults}>
+                        {item.results.map((r, ri) => (
+                          <div key={ri} className={styles.caseResultItem}>
+                            <span className={styles.caseResultValue}>{r.value}</span>
+                            <span className={styles.caseResultLabel}>{r.label}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </motion.div>
-                </SwiperSlide>
+                  </div>
+                </CardReveal>
               ))}
-            </Swiper>
+            </div>
           </div>
         </section>
 
