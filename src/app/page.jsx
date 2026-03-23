@@ -14,7 +14,14 @@ import {
   FileText, 
   Eye,
   Gift,
-  ChevronDown
+  ChevronDown,
+  BriefcaseBusiness,
+  ClipboardCheck,
+  Wrench,
+  ThumbsUp,
+  RefreshCw,
+  Shield,
+  Heart
 } from 'lucide-react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -138,13 +145,13 @@ const SOLUTIONS = [
     highlight: 'Готовый сотрудник за 24-48 часов',
     image: '/images/solution-staff.png',
     params: [
-      { label: 'Опыт', svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M2 17V7a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2z"/><path d="M8 5V3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2"/><path d="M12 12v.01"/><path d="M2 10h20"/></svg> },
-      { label: 'Документы', svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg> },
-      { label: 'Навыки', svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 16.8l-6.2 4.5 2.4-7.4L2 9.4h7.6z"/></svg> },
-      { label: 'Рекомендации', svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v12"/><path d="M15 5.88L14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88z"/></svg> },
-      { label: 'Адаптивность', svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3"/><circle cx="12" cy="12" r="4"/><path d="M5.64 5.64l2.12 2.12m8.48 8.48l2.12 2.12M5.64 18.36l2.12-2.12m8.48-8.48l2.12-2.12"/></svg> },
-      { label: 'Устойчивость', svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg> },
-      { label: 'Ответственность', svg: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-3-3.87"/><path d="M4 21v-2a4 4 0 0 1 3-3.87"/><circle cx="12" cy="7" r="4"/><path d="M12 14l-2 3h4l-2 3"/></svg> },
+      { icon: BriefcaseBusiness, label: 'Опыт' },
+      { icon: ClipboardCheck, label: 'Документы' },
+      { icon: Wrench, label: 'Навыки' },
+      { icon: ThumbsUp, label: 'Рекомендации' },
+      { icon: RefreshCw, label: 'Адаптивность' },
+      { icon: Shield, label: 'Устойчивость' },
+      { icon: Heart, label: 'Ответственность' },
     ],
   },
   {
@@ -418,12 +425,15 @@ export default function HomePage() {
                       <p className={styles.solutionDesc}>{solution.desc}</p>
                       {solution.params && (
                         <div className={styles.paramsGrid}>
-                          {solution.params.map((p, pi) => (
-                            <div key={pi} className={styles.paramItem}>
-                              {p.svg}
-                              <span>{p.label}</span>
-                            </div>
-                          ))}
+                          {solution.params.map((p, pi) => {
+                            const PIcon = p.icon
+                            return (
+                              <div key={pi} className={styles.paramItem}>
+                                <PIcon size={14} strokeWidth={1.5} />
+                                <span>{p.label}</span>
+                              </div>
+                            )
+                          })}
                         </div>
                       )}
                       <div className={styles.solutionHighlight}>{solution.highlight}</div>
