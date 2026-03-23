@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -12,7 +13,15 @@ import {
   Zap, 
   FileText, 
   Eye,
-  Gift
+  Gift,
+  ChevronDown,
+  Briefcase,
+  FileCheck,
+  Award,
+  Star,
+  UserCheck,
+  ShieldCheck,
+  HeartHandshake
 } from 'lucide-react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -21,6 +30,59 @@ import { MobileMenu } from '@/components/molecules'
 import { Logo } from '@/components/atoms'
 import { SplitText, AnimatedTag } from '@/components/atoms'
 import CookieBanner from '@/components/organisms/CookieBanner'
+
+// FAQ компонент
+const FAQItem = ({ question, answer, isOpen, onClick }) => (
+  <div className={styles.faqItem} data-open={isOpen}>
+    <button className={styles.faqQuestion} onClick={onClick}>
+      <span>{question}</span>
+      <ChevronDown size={20} className={styles.faqChevron} />
+    </button>
+    <motion.div
+      className={styles.faqAnswer}
+      initial={false}
+      animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+      transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <p>{answer}</p>
+    </motion.div>
+  </div>
+)
+
+const FAQ_DATA = [
+  {
+    q: 'Как быстро вы можете вывести персонал на объект?',
+    a: 'Готовый сотрудник выходит на объект в течение 24-48 часов после подписания договора. Для экстренных случаев — возможен вывод в день обращения.',
+  },
+  {
+    q: 'Что происходит, если клинер заболел или не вышел?',
+    a: 'Мы гарантируем замену в течение 2 часов. У нас всегда есть резервный персонал, готовый выйти на любой объект. Вы не заметите разницы — работа не остановится.',
+  },
+  {
+    q: 'Какие документы нужны для начала работы?',
+    a: 'Достаточно заключить договор аутстаффинга. Мы берём на себя все юридические вопросы: оформление сотрудников, налоги, ПФР, страховки. Вы получаете счёт и акт.',
+  },
+  {
+    q: 'Чем аутстаффинг отличается от обычного найма клинера?',
+    a: 'При аутстаффинге сотрудник оформлен у нас, а работает у вас. Вы не платите налоги, не оформляете кадровые документы, не решаете конфликты. Если сотрудник не подходит — мы заменим его бесплатно.',
+  },
+  {
+    q: 'Как формируется цена?',
+    a: 'Цена фиксированная и зависит от площади объекта, графика работы и количества персонала. Никаких скрытых платежей — вы всегда знаете итоговую сумму. Оплата только безналичная.',
+  },
+  {
+    q: 'Работаете ли вы с сетевыми объектами?',
+    a: 'Да, мы специализируемся на сетевых фитнес-клубах и ресторанах. Для сетевых клиентов действует скидка 10% и персональный менеджер на каждый объект.',
+  },
+  {
+    q: 'Кто контролирует качество уборки?',
+    a: 'За каждым объектом закреплён персональный менеджер, который проводит регулярные проверки качества. Если результат вас не устраивает — замена сотрудника в течение дня без доплаты.',
+  },
+  {
+    q: 'Какую ответственность вы несёте за действия персонала?',
+    a: 'Полную. Все сотрудники застрахованы. Если клинер что-то повредил или потерял — мы компенсируем ущерб. Вы юридически защищены договором.',
+  },
+]
 
 // Анимация для карточек — fade + slide up
 const CardReveal = ({ children, delay = 0, className = '' }) => (
@@ -79,9 +141,18 @@ const SOLUTIONS = [
   {
     num: 1,
     title: 'Готовый персонал 24/7',
-    desc: 'Мы подбираем персонал по 7 параметрам: опыт, документы, навыки, рекомендации, адаптивность, устойчивость к нагрузкам, ответственность',
+    desc: 'Мы подбираем персонал по 7 параметрам. Замена — за 2 часа.',
     highlight: 'Готовый сотрудник за 24-48 часов',
     image: '/images/solution-staff.png',
+    params: [
+      { icon: Briefcase, label: 'Опыт' },
+      { icon: FileCheck, label: 'Документы' },
+      { icon: Award, label: 'Навыки' },
+      { icon: Star, label: 'Рекомендации' },
+      { icon: UserCheck, label: 'Адаптивность' },
+      { icon: ShieldCheck, label: 'Устойчивость' },
+      { icon: HeartHandshake, label: 'Ответственность' },
+    ],
   },
   {
     num: 2,
@@ -171,6 +242,7 @@ const PORTFOLIO = [
 ]
 
 export default function HomePage() {
+  const [openFaq, setOpenFaq] = useState(null)
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.pageBody}>
@@ -351,6 +423,19 @@ export default function HomePage() {
                     <div className={styles.solutionContent}>
                       <h3 className={styles.solutionTitle}>{solution.title}</h3>
                       <p className={styles.solutionDesc}>{solution.desc}</p>
+                      {solution.params && (
+                        <div className={styles.paramsGrid}>
+                          {solution.params.map((p, pi) => {
+                            const PIcon = p.icon
+                            return (
+                              <div key={pi} className={styles.paramItem}>
+                                <PIcon size={16} strokeWidth={1.5} />
+                                <span>{p.label}</span>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      )}
                       <div className={styles.solutionHighlight}>{solution.highlight}</div>
                     </div>
                   </div>
@@ -513,6 +598,29 @@ export default function HomePage() {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div>
+        </section>
+
+        {/* ===================== FAQ ===================== */}
+        <section className={styles.faqSection}>
+          <div className={styles.sectionPadding}>
+            <div className={styles.sectionTop}>
+              <AnimatedTag>Вопросы</AnimatedTag>
+              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Часто задаваемые вопросы</SplitText>
+            </div>
+
+            <div className={styles.faqList}>
+              {FAQ_DATA.map((item, i) => (
+                <CardReveal key={i} delay={i * 0.05}>
+                  <FAQItem
+                    question={item.q}
+                    answer={item.a}
+                    isOpen={openFaq === i}
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                  />
+                </CardReveal>
+              ))}
+            </div>
           </div>
         </section>
 
