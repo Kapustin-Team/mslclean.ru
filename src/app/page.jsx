@@ -61,7 +61,7 @@ const PROBLEMS = [
     items: [
       'Вы не кадровик, но должны следить за графиком',
       'Больничные, отпуска, конфликты',
-      'Налоги, ПФР, документы — ваша задача',
+      'Занимаетесь налогами, ПФР и документами',
     ],
   },
   {
@@ -109,7 +109,7 @@ const SOLUTIONS = [
 const USP = [
   {
     Icon: Dumbbell,
-    title: 'Специалист по фитнес-клубам и ресторанам',
+    title: 'Специализируемся на фитнес-клубах и ресторанах',
     desc: 'Мы работаем с вашей индустрией 3+ года, понимаем специфику',
   },
   {
@@ -130,7 +130,7 @@ const USP = [
   {
     Icon: FileText,
     title: 'Полная юридическая поддержка',
-    desc: 'Договор, налоги, ПФР, страховка — все на нас',
+    desc: 'Следим не только за чистотой на объекте, но и за юридическим оформлением',
   },
   {
     Icon: Eye,
@@ -157,7 +157,7 @@ const STEPS = [
   },
   {
     num: 4,
-    title: 'Сопровождение',
+    title: 'Сотрудничество',
     desc: 'Менеджер на связи 24/7, решаем все вопросы',
   },
 ]
@@ -218,9 +218,7 @@ export default function HomePage() {
               
               {/* Title on image */}
               <h1 className={styles.heroTitle}>
-                <SplitText as="span" delay={0.2}>Чистота.</SplitText>
-                <br />
-                <SplitText as="span" delay={0.4}>Без управленческих забот</SplitText>
+                <SplitText as="span" delay={0.2}>Чистота без управленческих забот</SplitText>
               </h1>
               
               {/* Content box */}
@@ -231,12 +229,25 @@ export default function HomePage() {
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <p className={styles.heroText}>
-                  Подбор, замены и контроль клинингового персонала под ключ. 
-                  Наша команда экспертов обеспечит чистоту на вашем объекте.
+                  Подбор, замена и контроль процесса подключений под ключ для ресторанов и фитнес-клубов. 
+                  Мы предоставляем сотрудников и полностью берём на себя управление их работой.
                 </p>
                 <Link href="#contact" className={styles.heroButton}>
                   Связаться с нами
                 </Link>
+              </motion.div>
+
+              {/* Key facts strip */}
+              <motion.div
+                className={styles.heroFacts}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                <div className={styles.heroFactItem}>Фиксированная цена</div>
+                <div className={styles.heroFactItem}>Договор</div>
+                <div className={styles.heroFactItem}>Безналичная оплата</div>
+                <div className={styles.heroFactItem}>Аутстаффинг персонала</div>
               </motion.div>
             </motion.div>
           </div>
@@ -282,7 +293,7 @@ export default function HomePage() {
         <section className={styles.problemsSection} id="problems">
           <div className={styles.sectionPadding}>
             <div className={styles.sectionTop}>
-              <AnimatedTag>Знакомо?</AnimatedTag>
+              <AnimatedTag>Проблемы</AnimatedTag>
               <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Вам знакомо это?</SplitText>
               <SplitText as="p" className={styles.sectionSubtitle} delay={0.2}>Это обходится вам дорого</SplitText>
             </div>
@@ -301,6 +312,16 @@ export default function HomePage() {
                   </div>
                 </CardReveal>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===================== CTA BETWEEN ===================== */}
+        <section className={styles.ctaBetween}>
+          <div className={styles.sectionPadding}>
+            <div className={styles.ctaBetweenInner}>
+              <p className={styles.ctaBetweenText}>Готовы избавиться от проблем с персоналом?</p>
+              <Link href="#contact" className={styles.ctaBetweenButton}>Получить расчёт</Link>
             </div>
           </div>
         </section>
@@ -339,12 +360,22 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ===================== CTA BETWEEN 2 ===================== */}
+        <section className={styles.ctaBetween}>
+          <div className={styles.sectionPadding}>
+            <div className={styles.ctaBetweenInner}>
+              <p className={styles.ctaBetweenText}>Хотите узнать стоимость для вашего объекта?</p>
+              <Link href="#contact" className={styles.ctaBetweenButton}>Оставить заявку</Link>
+            </div>
+          </div>
+        </section>
+
         {/* ===================== USP ===================== */}
         <section className={styles.uspSection}>
           <div className={styles.sectionPadding}>
             <div className={styles.sectionTop}>
-              <AnimatedTag>Преимущества</AnimatedTag>
-              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Почему выбирают нас</SplitText>
+              <AnimatedTag>Выгоды</AnimatedTag>
+              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Ваши выгоды от работы с нами</SplitText>
             </div>
 
             <div className={styles.uspGrid}>
@@ -370,7 +401,7 @@ export default function HomePage() {
         <section className={styles.stepsSection}>
           <div className={styles.sectionPadding}>
             <div className={styles.sectionTop}>
-              <AnimatedTag>Процесс</AnimatedTag>
+              <AnimatedTag>Сотрудничество</AnimatedTag>
               <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Как это работает? Всего 4 шага</SplitText>
             </div>
 
@@ -384,6 +415,43 @@ export default function HomePage() {
                   </div>
                 </CardReveal>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===================== FOR WHO ===================== */}
+        <section className={styles.forWhoSection}>
+          <div className={styles.sectionPadding}>
+            <div className={styles.sectionTop}>
+              <AnimatedTag>Направления</AnimatedTag>
+              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Для кого мы работаем</SplitText>
+              <SplitText as="p" className={styles.sectionSubtitle} delay={0.2}>Мы работаем с бизнесом, где важна чистота как стандарт, дисциплина и стабильный результат</SplitText>
+            </div>
+
+            <div className={styles.forWhoGrid}>
+              {[
+                { title: 'Фитнес-клубы', desc: 'Ежедневная уборка залов, раздевалок, бассейнов' },
+                { title: 'Рестораны и кафе', desc: 'Чистота кухни и зала по стандартам СЭС' },
+                { title: 'HoReCa', desc: 'Отели, кейтеринг, банкетные площадки' },
+                { title: 'Коммерческие помещения', desc: 'Офисы, бизнес-центры, торговые площади' },
+              ].map((item, i) => (
+                <CardReveal key={i} delay={i * 0.1}>
+                  <div className={styles.forWhoCard}>
+                    <h3 className={styles.forWhoCardTitle}>{item.title}</h3>
+                    <p className={styles.forWhoCardDesc}>{item.desc}</p>
+                  </div>
+                </CardReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ===================== CTA BETWEEN 3 ===================== */}
+        <section className={styles.ctaBetween}>
+          <div className={styles.sectionPadding}>
+            <div className={styles.ctaBetweenInner}>
+              <p className={styles.ctaBetweenText}>Узнайте, как мы можем помочь вашему бизнесу</p>
+              <Link href="#contact" className={styles.ctaBetweenButton}>Связаться с нами</Link>
             </div>
           </div>
         </section>
@@ -445,6 +513,22 @@ export default function HomePage() {
                 </SwiperSlide>
               ))}
             </Swiper>
+          </div>
+        </section>
+
+        {/* ===================== FINAL CTA ===================== */}
+        <section className={styles.finalCtaSection}>
+          <div className={styles.sectionPadding}>
+            <div className={styles.finalCtaInner}>
+              <SplitText as="h2" className={styles.finalCtaTitle} delay={0.1}>Готовы повысить стандарт чистоты вашего объекта?</SplitText>
+              <p className={styles.finalCtaText}>
+                Завтра ваша команда будет работать без головной боли с поиском и заменой персонала. 
+                Оставьте заявку — мы предложим решение под ваш объект.
+              </p>
+              <Link href="#contact" className={styles.finalCtaButton}>
+                Получить расчёт бесплатно
+              </Link>
+            </div>
           </div>
         </section>
 

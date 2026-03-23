@@ -1192,3 +1192,210 @@
     font-size: 1.25rem;
   }
 }
+
+/* ===================== HERO FACTS STRIP ===================== */
+.heroFacts {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 3;
+}
+
+.heroFactItem {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.heroFactItem:last-child {
+  border-right: none;
+}
+
+@media (max-width: 768px) {
+  .heroFacts {
+    flex-wrap: wrap;
+  }
+  .heroFactItem {
+    flex: 1 1 50%;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .heroFactItem:nth-child(2) {
+    border-right: none;
+  }
+  .heroFactItem:nth-child(3),
+  .heroFactItem:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+/* ===================== CTA BETWEEN SECTIONS ===================== */
+.ctaBetween {
+  background: #0a0a0a;
+}
+
+.ctaBetweenInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ctaBetweenText {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ctaBetweenButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.875rem 2rem;
+  background: #fff;
+  color: #000;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ctaBetweenButton:hover {
+  background: #e5e5e5;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .ctaBetweenInner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+  .ctaBetweenText {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===================== FOR WHO SECTION ===================== */
+.forWhoSection {
+  background: #0a0a0a;
+  padding: 5rem 0;
+}
+
+.forWhoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.forWhoCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.forWhoCard:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.forWhoCardTitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+.forWhoCardDesc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .forWhoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .forWhoGrid {
+    grid-template-columns: 1fr;
+  }
+  .forWhoSection {
+    padding: 3rem 0;
+  }
+}
+
+/* ===================== FINAL CTA SECTION ===================== */
+.finalCtaSection {
+  background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.finalCtaInner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.finalCtaTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.finalCtaText {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.finalCtaButton {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: #fff;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.finalCtaButton:hover {
+  background: #e5e5e5;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .finalCtaTitle {
+    font-size: 1.75rem;
+  }
+  .finalCtaSection {
+    padding: 3rem 0;
+  }
+}
