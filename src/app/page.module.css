@@ -1242,7 +1242,7 @@
 
 /* ===================== CTA BETWEEN SECTIONS ===================== */
 .ctaBetween {
-  background: #0a0a0a;
+  background: var(--color-background);
 }
 
 .ctaBetweenInner {
@@ -1251,22 +1251,22 @@
   justify-content: space-between;
   gap: 2rem;
   padding: 2rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .ctaBetweenText {
   font-size: 1.25rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text);
 }
 
 .ctaBetweenButton {
   display: inline-flex;
   align-items: center;
   padding: 0.875rem 2rem;
-  background: #fff;
-  color: #000;
+  background: var(--color-primary);
+  color: #fff;
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 999px;
@@ -1276,7 +1276,7 @@
 }
 
 .ctaBetweenButton:hover {
-  background: #e5e5e5;
+  background: var(--color-primary-dark);
   transform: scale(1.02);
 }
 
@@ -1294,7 +1294,7 @@
 
 /* ===================== FOR WHO SECTION ===================== */
 .forWhoSection {
-  background: #0a0a0a;
+  background: var(--color-background);
   padding: 5rem 0;
 }
 
@@ -1306,28 +1306,28 @@
 }
 
 .forWhoCard {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-background-alt);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
   padding: 2rem;
   transition: border-color 0.3s, background 0.3s;
 }
 
 .forWhoCard:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 0, 0, 0.15);
+  background: var(--color-surface-light);
 }
 
 .forWhoCardTitle {
   font-size: 1.15rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-text);
   margin-bottom: 0.75rem;
 }
 
 .forWhoCardDesc {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-secondary);
   line-height: 1.5;
 }
 
@@ -1348,7 +1348,7 @@
 
 /* ===================== FINAL CTA SECTION ===================== */
 .finalCtaSection {
-  background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+  background: var(--color-background);
   padding: 5rem 0;
   text-align: center;
 }
@@ -1361,14 +1361,14 @@
 .finalCtaTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text);
   line-height: 1.2;
   margin-bottom: 1.5rem;
 }
 
 .finalCtaText {
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--color-text-secondary);
   line-height: 1.6;
   margin-bottom: 2.5rem;
 }
@@ -1377,8 +1377,8 @@
   display: inline-flex;
   align-items: center;
   padding: 1rem 2.5rem;
-  background: #fff;
-  color: #000;
+  background: var(--color-primary);
+  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 999px;
@@ -1387,7 +1387,7 @@
 }
 
 .finalCtaButton:hover {
-  background: #e5e5e5;
+  background: var(--color-primary-dark);
   transform: scale(1.02);
 }
 
@@ -1413,20 +1413,20 @@
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem 0.75rem;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-surface-light);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 999px;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--color-text-secondary);
 }
 
 .paramItem svg {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-text-muted);
 }
 
 /* ===================== FAQ SECTION ===================== */
 .faqSection {
-  background: #0a0a0a;
+  background: var(--color-background);
   padding: 5rem 0;
 }
 
@@ -1439,11 +1439,11 @@
 }
 
 .faqItem {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .faqItem:first-child {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .faqQuestion {
@@ -1454,7 +1454,7 @@
   padding: 1.25rem 0;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--color-text);
   font-size: 1.05rem;
   font-weight: 500;
   text-align: left;
@@ -1464,13 +1464,13 @@
 }
 
 .faqQuestion:hover {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-text-secondary);
 }
 
 .faqChevron {
   flex-shrink: 0;
   transition: transform 0.3s;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-text-muted);
 }
 
 .faqItem[data-open="true"] .faqChevron {
@@ -1484,7 +1484,7 @@
 .faqAnswer p {
   padding: 0 0 1.25rem;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
@@ -1500,7 +1500,7 @@
 
 /* ===================== CASES SECTION ===================== */
 .casesSection {
-  background: #0a0a0a;
+  background: var(--color-background);
   padding: 5rem 0;
 }
 
@@ -1512,15 +1512,15 @@
 }
 
 .caseCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--color-background-alt);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 1.25rem;
   overflow: hidden;
   transition: border-color 0.3s, transform 0.3s;
 }
 
 .caseCard:hover {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
 }
 
@@ -1568,7 +1568,7 @@
 .caseTitle {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text);
   margin-bottom: 1rem;
 }
 
@@ -1600,7 +1600,7 @@
 .caseProblem p,
 .caseSolution p {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.55);
+  color: var(--color-text-secondary);
   line-height: 1.5;
 }
 
@@ -1609,7 +1609,7 @@
   gap: 1rem;
   margin-top: 1.25rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(0,0,0,0.08);
 }
 
 .caseResultItem {
@@ -1621,13 +1621,13 @@
   display: block;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text);
   line-height: 1.2;
 }
 
 .caseResultLabel {
   font-size: 0.7rem;
-  color: rgba(255,255,255,0.4);
+  color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
