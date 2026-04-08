@@ -766,7 +766,7 @@ export default function HomePage() {
               </div>
               <div className={styles.footerSocialRow}>
                 <Link href="https://t.me/MSLClean" className={styles.socialBtn}>Telegram</Link>
-                <Link href="https://t.me/MSLClean" className={styles.socialBtn}>WhatsApp</Link>
+                <Link href="https://t.me/MSLClean" className={styles.socialBtn}>Max</Link>
               </div>
 
               {/* Bottom */}
