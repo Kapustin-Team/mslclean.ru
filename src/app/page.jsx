@@ -14,14 +14,7 @@ import {
   FileText, 
   Eye,
   Gift,
-  ChevronDown,
-  BriefcaseBusiness,
-  ClipboardCheck,
-  Wrench,
-  ThumbsUp,
-  RefreshCw,
-  Shield,
-  Heart
+  ChevronDown
 } from 'lucide-react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -144,15 +137,6 @@ const SOLUTIONS = [
     desc: 'Мы подбираем персонал по 7 параметрам. Замена — за 2 часа.',
     highlight: 'Готовый сотрудник за 24-48 часов',
     image: '/images/solution-staff.png',
-    params: [
-      { icon: BriefcaseBusiness, label: 'Опыт' },
-      { icon: ClipboardCheck, label: 'Документы' },
-      { icon: Wrench, label: 'Навыки' },
-      { icon: ThumbsUp, label: 'Рекомендации' },
-      { icon: RefreshCw, label: 'Адаптивность' },
-      { icon: Shield, label: 'Устойчивость' },
-      { icon: Heart, label: 'Ответственность' },
-    ],
   },
   {
     num: 2,
@@ -358,7 +342,7 @@ export default function HomePage() {
           <div className={styles.keyFactsInner}>
             <div className={styles.keyFactItem}>Фиксированная цена</div>
             <div className={styles.keyFactItem}>Договор</div>
-            <div className={styles.keyFactItem}>Безналичная оплата</div>
+            <div className={styles.keyFactItem}>Безналичная<br className={styles.mobileBr} /> оплата</div>
             <div className={styles.keyFactItem}>Аутстаффинг персонала</div>
           </div>
         </motion.section>

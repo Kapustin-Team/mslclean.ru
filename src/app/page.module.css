@@ -314,6 +314,7 @@
 
 .problemCard {
   background: var(--color-accent-light);
+  border: 1px solid rgba(91, 188, 199, 0.3);
   border-radius: var(--radius-main);
   padding: 2rem;
   position: relative;
@@ -331,6 +332,7 @@
   font-weight: 600;
   border-radius: 50%;
   margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(91, 188, 199, 0.35);
 }
 
 .problemTitle {
@@ -376,7 +378,8 @@
   align-items: flex-start;
   text-align: left;
   border-radius: var(--radius-main);
-  background: white;
+  background: var(--color-primary-light);
+  border: 1px solid rgba(31, 88, 102, 0.18);
 }
 
 .solutionImageWrapper {
@@ -417,8 +420,8 @@
 
 .solutionTitle {
   font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--color-text);
+  font-weight: 600;
+  color: var(--color-primary-dark);
 }
 
 .solutionDesc {
@@ -430,10 +433,11 @@
 .solutionHighlight {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--color-primary);
+  color: white;
   padding: 0.5rem 1rem;
-  background: rgba(31, 88, 102, 0.07);
+  background: var(--color-primary);
   border-radius: var(--radius-small);
+  box-shadow: 0 4px 12px rgba(31, 88, 102, 0.25);
 }
 
 .solutionLine {
@@ -1084,7 +1088,7 @@
 /* ===================== RESPONSIVE - MOBILE ===================== */
 @media (max-width: 767px) {
   .navbarInner {
-    padding: 0 20px;
+    padding: 4px 20px;
   }
 
   .navButton {
@@ -1092,8 +1096,31 @@
     font-size: 0.75rem;
   }
 
+  .mobileBr {
+    display: inline;
+  }
+
+  .heroSection {
+    min-height: calc(100vh - 96px);
+    min-height: calc(100dvh - 96px);
+    padding-top: 56px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroContainer {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    width: 100%;
+    padding-bottom: 0;
+  }
+
   .heroCard {
-    min-height: 500px;
+    flex: 1;
+    width: 100%;
+    min-height: 0;
   }
 
   .heroTitle {
@@ -1221,6 +1248,10 @@
 
 .keyFactItem:last-child {
   border-right: none;
+}
+
+.mobileBr {
+  display: none;
 }
 
 @media (max-width: 768px) {
