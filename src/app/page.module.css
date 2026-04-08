@@ -1195,12 +1195,15 @@
 
 /* ===================== KEY FACTS STRIP ===================== */
 .keyFacts {
-  background: var(--color-primary);
+  padding: 0 16px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .keyFactsInner {
-  max-width: 1200px;
-  margin: 0 auto;
+  background: var(--color-primary);
+  border-radius: 10px;
+  overflow: hidden;
   display: flex;
   gap: 0;
 }
