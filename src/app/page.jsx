@@ -343,21 +343,25 @@ export default function HomePage() {
                 </Link>
               </motion.div>
 
-              {/* Key facts strip */}
-              <motion.div
-                className={styles.heroFacts}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-              >
-                <div className={styles.heroFactItem}>Фиксированная цена</div>
-                <div className={styles.heroFactItem}>Договор</div>
-                <div className={styles.heroFactItem}>Безналичная оплата</div>
-                <div className={styles.heroFactItem}>Аутстаффинг персонала</div>
-              </motion.div>
             </motion.div>
           </div>
         </section>
+
+        {/* ===================== KEY FACTS ===================== */}
+        <motion.section
+          className={styles.keyFacts}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className={styles.keyFactsInner}>
+            <div className={styles.keyFactItem}>Фиксированная цена</div>
+            <div className={styles.keyFactItem}>Договор</div>
+            <div className={styles.keyFactItem}>Безналичная оплата</div>
+            <div className={styles.keyFactItem}>Аутстаффинг персонала</div>
+          </div>
+        </motion.section>
 
         {/* ===================== ABOUT ===================== */}
         <section className={styles.aboutSection} id="about">
