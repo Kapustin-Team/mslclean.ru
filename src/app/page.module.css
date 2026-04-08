@@ -1127,6 +1127,23 @@
     font-size: 1.75rem;
   }
 
+  .caseResults {
+    gap: 0.5rem;
+  }
+
+  .caseResultItem {
+    min-width: 0;
+  }
+
+  .caseResultValue {
+    font-size: 1.05rem;
+  }
+
+  .caseResultLabel {
+    font-size: 0.6rem;
+    letter-spacing: 0.02em;
+  }
+
   .sectionPadding {
     padding: 3rem 20px;
   }
