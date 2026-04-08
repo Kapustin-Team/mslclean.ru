@@ -269,19 +269,19 @@ export default function HomePage() {
           <div className={styles.navbarInner}>
 <Logo />
             <div className={styles.navMenu}>
-              <Link href="#about" className={styles.navLink}>О компании</Link>
-              <Link href="#services" className={styles.navLink}>Услуги</Link>
-              <Link href="#portfolio" className={styles.navLink}>Клиенты</Link>
-              <Link href="#contact" className={styles.navLink}>Контакты</Link>
+              <a href="#about" className={styles.navLink}>О компании</a>
+              <a href="#services" className={styles.navLink}>Услуги</a>
+              <a href="#portfolio" className={styles.navLink}>Клиенты</a>
+              <a href="#contact" className={styles.navLink}>Контакты</a>
             </div>
             <div className={styles.navRight}>
               <div className={styles.navPhone}>
                 <a href="tel:+79661155450">+7 (966) 115-54-50</a>
                 <span className={styles.navPhoneHint}>Ежедневно 8:00–23:00</span>
               </div>
-              <Link href="#contact" className={styles.navButton}>
+              <a href="#contact" className={styles.navButton}>
                 Получить расчёт
-              </Link>
+              </a>
               <MobileMenu />
             </div>
           </div>
@@ -322,9 +322,9 @@ export default function HomePage() {
                   Подбор, замена и контроль процесса подключений под ключ для ресторанов и фитнес-клубов. 
                   Мы предоставляем сотрудников и полностью берём на себя управление их работой.
                 </p>
-                <Link href="#contact" className={styles.heroButton}>
+                <a href="#contact" className={styles.heroButton}>
                   Связаться с нами
-                </Link>
+                </a>
               </motion.div>
 
             </motion.div>
@@ -415,7 +415,7 @@ export default function HomePage() {
           <div className={styles.sectionPadding}>
             <div className={styles.ctaBetweenInner}>
               <p className={styles.ctaBetweenText}>Готовы избавиться от проблем с персоналом?</p>
-              <Link href="#contact" className={styles.ctaBetweenButton}>Получить расчёт</Link>
+              <a href="#contact" className={styles.ctaBetweenButton}>Получить расчёт</a>
             </div>
           </div>
         </section>
@@ -472,7 +472,7 @@ export default function HomePage() {
           <div className={styles.sectionPadding}>
             <div className={styles.ctaBetweenInner}>
               <p className={styles.ctaBetweenText}>Хотите узнать стоимость для вашего объекта?</p>
-              <Link href="#contact" className={styles.ctaBetweenButton}>Оставить заявку</Link>
+              <a href="#contact" className={styles.ctaBetweenButton}>Оставить заявку</a>
             </div>
           </div>
         </section>
@@ -558,7 +558,7 @@ export default function HomePage() {
           <div className={styles.sectionPadding}>
             <div className={styles.ctaBetweenInner}>
               <p className={styles.ctaBetweenText}>Узнайте, как мы можем помочь вашему бизнесу</p>
-              <Link href="#contact" className={styles.ctaBetweenButton}>Связаться с нами</Link>
+              <a href="#contact" className={styles.ctaBetweenButton}>Связаться с нами</a>
             </div>
           </div>
         </section>
@@ -644,9 +644,9 @@ export default function HomePage() {
                 Завтра ваша команда будет работать без головной боли с поиском и заменой персонала. 
                 Оставьте заявку — мы предложим решение под ваш объект.
               </p>
-              <Link href="#contact" className={styles.finalCtaButton}>
+              <a href="#contact" className={styles.finalCtaButton}>
                 Получить расчёт бесплатно
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -729,9 +729,9 @@ export default function HomePage() {
                   <h5 className={styles.footerHeading}>Навигация</h5>
                   <nav className={styles.footerLinks}>
                     <Link href="/">Главная</Link>
-                    <Link href="#services">Услуги</Link>
-                    <Link href="#about">О компании</Link>
-                    <Link href="#portfolio">Клиенты</Link>
+                    <a href="#services">Услуги</a>
+                    <a href="#about">О компании</a>
+                    <a href="#portfolio">Клиенты</a>
                   </nav>
                 </div>
 
