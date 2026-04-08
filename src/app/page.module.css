@@ -1698,4 +1698,17 @@
   .caseImageWrapper {
     height: 180px;
   }
+  .caseResults {
+    gap: 0.5rem;
+  }
+  .caseResultItem {
+    min-width: 0;
+  }
+  .caseResultValue {
+    font-size: 1.2rem;
+  }
+  .caseResultLabel {
+    font-size: 0.6rem;
+    letter-spacing: 0.02em;
+  }
 }
