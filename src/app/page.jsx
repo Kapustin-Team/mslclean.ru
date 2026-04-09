@@ -322,6 +322,7 @@ export default function HomePage() {
                   Подбор, замена и контроль процесса подключений под ключ для ресторанов и фитнес-клубов. 
                   Мы предоставляем сотрудников и полностью берём на себя управление их работой.
                 </p>
+                <span className={styles.heroDiscount}>Скидка 10% для сетевых бизнесов от 3-х объектов</span>
                 <a href="#contact" className={styles.heroButton}>
                   Связаться с нами
                 </a>
@@ -347,17 +348,6 @@ export default function HomePage() {
           </div>
         </motion.section>
 
-        {/* ===================== UTP DISCOUNT BANNER ===================== */}
-        <section className={styles.utpBanner}>
-          <div className={styles.sectionPadding}>
-            <div className={styles.utpBannerInner}>
-              <div className={styles.utpBannerContent}>
-                <h2 className={styles.utpBannerTitle}>Скидка 10% для сетевых бизнесов и крупных объектов</h2>
-                <a href="#contact" className={styles.utpBannerButton}>Получить скидку</a>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* ===================== ABOUT ===================== */}
         <section className={styles.aboutSection} id="about">
