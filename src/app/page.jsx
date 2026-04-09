@@ -424,8 +424,16 @@ export default function HomePage() {
 
         {/* ===================== CTA BETWEEN ===================== */}
         <section className={styles.ctaBetween}>
-          <div className={styles.sectionPadding}>
-            <div className={styles.ctaBetweenInner}>
+          <div className={styles.ctaBetweenInner}>
+            <div className={styles.ctaBetweenImage}>
+              <Image 
+                src="/images/cta-team-1.jpg"
+                alt="Команда клининга"
+                fill
+                className={styles.ctaBetweenImg}
+              />
+            </div>
+            <div className={styles.ctaBetweenPanel}>
               <p className={styles.ctaBetweenText}>Готовы избавиться от проблем с персоналом?</p>
               <a href="#contact" className={styles.ctaBetweenButton}>Получить расчёт</a>
             </div>
@@ -480,11 +488,19 @@ export default function HomePage() {
         </section>
 
         {/* ===================== CTA BETWEEN 2 ===================== */}
-        <section className={styles.ctaBetween}>
-          <div className={styles.sectionPadding}>
-            <div className={styles.ctaBetweenInner}>
+        <section className={`${styles.ctaBetween} ${styles.ctaBetweenReverse}`}>
+          <div className={styles.ctaBetweenInner}>
+            <div className={styles.ctaBetweenPanel}>
               <p className={styles.ctaBetweenText}>Хотите узнать стоимость для вашего объекта?</p>
               <a href="#contact" className={styles.ctaBetweenButton}>Оставить заявку</a>
+            </div>
+            <div className={styles.ctaBetweenImage}>
+              <Image 
+                src="/images/cta-team-2.jpg"
+                alt="Клининг на объекте"
+                fill
+                className={styles.ctaBetweenImg}
+              />
             </div>
           </div>
         </section>
@@ -567,8 +583,16 @@ export default function HomePage() {
 
         {/* ===================== CTA BETWEEN 3 ===================== */}
         <section className={styles.ctaBetween}>
-          <div className={styles.sectionPadding}>
-            <div className={styles.ctaBetweenInner}>
+          <div className={styles.ctaBetweenInner}>
+            <div className={styles.ctaBetweenImage}>
+              <Image 
+                src="/images/cta-team-3.jpg"
+                alt="Команда за работой"
+                fill
+                className={styles.ctaBetweenImg}
+              />
+            </div>
+            <div className={styles.ctaBetweenPanel}>
               <p className={styles.ctaBetweenText}>Узнайте, как мы можем помочь вашему бизнесу</p>
               <a href="#contact" className={styles.ctaBetweenButton}>Связаться с нами</a>
             </div>

@@ -1297,26 +1297,45 @@
 
 .ctaBetweenInner {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 2rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  align-items: stretch;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.ctaBetweenImage {
+  position: relative;
+  flex: 3;
+  min-height: 300px;
+}
+
+.ctaBetweenImg {
+  object-fit: cover;
+}
+
+.ctaBetweenPanel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 3rem;
+  background: rgba(31, 88, 102, 0.9);
 }
 
 .ctaBetweenText {
   font-size: 1.25rem;
   font-weight: 500;
-  color: var(--color-text);
+  color: #fff;
+  line-height: 1.4;
 }
 
 .ctaBetweenButton {
   display: inline-flex;
   align-items: center;
   padding: 0.875rem 2rem;
-  background: var(--color-primary);
-  color: #fff;
+  background: white;
+  color: var(--color-primary);
   font-size: 0.9rem;
   font-weight: 600;
   border-radius: 999px;
@@ -1326,16 +1345,27 @@
 }
 
 .ctaBetweenButton:hover {
-  background: var(--color-primary-dark);
+  background: rgba(255, 255, 255, 0.9);
   transform: scale(1.02);
+}
+
+.ctaBetweenReverse .ctaBetweenInner {
+  flex-direction: row-reverse;
 }
 
 @media (max-width: 768px) {
   .ctaBetweenInner {
     flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    padding: 1.5rem 0;
+  }
+  .ctaBetweenReverse .ctaBetweenInner {
+    flex-direction: column;
+  }
+  .ctaBetweenImage {
+    width: 100%;
+    min-height: 200px;
+  }
+  .ctaBetweenPanel {
+    padding: 2rem;
   }
   .ctaBetweenText {
     font-size: 1.1rem;
