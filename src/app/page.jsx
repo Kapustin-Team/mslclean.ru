@@ -388,8 +388,8 @@ export default function HomePage() {
           <div className={styles.sectionPadding}>
             <div className={styles.sectionTop}>
               <AnimatedTag>Проблемы</AnimatedTag>
-              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Вам знакомо это?</SplitText>
-              <SplitText as="p" className={styles.sectionSubtitle} delay={0.2}>Это обходится вам дорого</SplitText>
+              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Это обходится вам дорого</SplitText>
+              <SplitText as="p" className={styles.sectionSubtitle} delay={0.2}>Знакомо?</SplitText>
             </div>
 
             <div className={styles.problemsGrid}>
@@ -482,7 +482,7 @@ export default function HomePage() {
           <div className={styles.sectionPadding}>
             <div className={styles.sectionTop}>
               <AnimatedTag>Выгоды</AnimatedTag>
-              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Ваши выгоды от работы с нами</SplitText>
+              <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Почему выбирают нас?</SplitText>
             </div>
 
             <div className={styles.uspGrid}>

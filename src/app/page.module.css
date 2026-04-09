@@ -141,6 +141,7 @@
   line-height: 1.1;
   color: white;
   letter-spacing: -0.01em;
+  white-space: nowrap;
 }
 
 .heroContent {
@@ -1016,7 +1017,6 @@
     top: 48px;
     left: 48px;
     right: auto;
-    max-width: 500px;
     font-size: 3.5rem;
   }
 
