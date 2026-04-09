@@ -310,6 +310,7 @@ export default function HomePage() {
               <h1 className={styles.heroTitle}>
                 <SplitText as="span" delay={0.2}>Чистота без управленческих забот</SplitText>
               </h1>
+              <AnimatedTag className={styles.heroDiscount}>Скидка 10% для сетевых бизнесов и крупных объектов</AnimatedTag>
               
               {/* Content box */}
               <motion.div 
@@ -322,7 +323,6 @@ export default function HomePage() {
                   Подбор, замена и контроль процесса подключений под ключ для ресторанов и фитнес-клубов. 
                   Мы предоставляем сотрудников и полностью берём на себя управление их работой.
                 </p>
-                <span className={styles.heroDiscount}>Скидка 10% для сетевых бизнесов от 3-х объектов</span>
                 <a href="#contact" className={styles.heroButton}>
                   Связаться с нами
                 </a>
