@@ -483,7 +483,7 @@ export default function HomePage() {
         {/* ===================== CTA BETWEEN 2 ===================== */}
         <CardReveal>
           <section className={`${styles.ctaBetween} ${styles.ctaBetweenReverse}`}>
-          <div className={styles.ctaBetweenInner} style={{ flexDirection: 'row-reverse' }}>
+          <div className={styles.ctaBetweenInner}>
             <div className={styles.ctaBetweenPanel}>
               <p className={styles.ctaBetweenText}>Хотите узнать стоимость для вашего объекта?</p>
               <a href="#contact" className={styles.ctaBetweenButton}>Оставить заявку</a>
