@@ -144,6 +144,18 @@
   white-space: nowrap;
 }
 
+.heroDiscount {
+  position: absolute;
+  top: 120px;
+  left: 24px;
+  right: 24px;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0;
+}
+
 .heroContent {
   position: absolute;
   bottom: 16px;
@@ -1034,6 +1046,12 @@
     left: 48px;
     right: auto;
     font-size: 3.5rem;
+  }
+
+  .heroDiscount {
+    top: 220px;
+    left: 48px;
+    font-size: 1rem;
   }
 
   .heroContent {
