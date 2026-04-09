@@ -423,22 +423,24 @@ export default function HomePage() {
         </section>
 
         {/* ===================== CTA BETWEEN ===================== */}
-        <section className={styles.ctaBetween}>
-          <div className={styles.ctaBetweenInner}>
-            <div className={styles.ctaBetweenImage}>
-              <Image 
-                src="/images/cta-team-1.jpg"
-                alt="Команда клининга"
-                fill
-                className={styles.ctaBetweenImg}
-              />
+        <CardReveal>
+          <section className={styles.ctaBetween}>
+            <div className={styles.ctaBetweenInner}>
+              <div className={styles.ctaBetweenImage}>
+                <Image 
+                  src="/images/cta-team-1.jpg"
+                  alt="Команда клининга"
+                  fill
+                  className={styles.ctaBetweenImg}
+                />
+              </div>
+              <div className={styles.ctaBetweenPanel}>
+                <p className={styles.ctaBetweenText}>Готовы избавиться от проблем с персоналом?</p>
+                <a href="#contact" className={styles.ctaBetweenButton}>Получить расчёт</a>
+              </div>
             </div>
-            <div className={styles.ctaBetweenPanel}>
-              <p className={styles.ctaBetweenText}>Готовы избавиться от проблем с персоналом?</p>
-              <a href="#contact" className={styles.ctaBetweenButton}>Получить расчёт</a>
-            </div>
-          </div>
-        </section>
+          </section>
+        </CardReveal>
 
         {/* ===================== SOLUTION ===================== */}
         <section className={styles.solutionSection} id="services">
@@ -488,8 +490,9 @@ export default function HomePage() {
         </section>
 
         {/* ===================== CTA BETWEEN 2 ===================== */}
-        <section className={`${styles.ctaBetween} ${styles.ctaBetweenReverse}`}>
-          <div className={styles.ctaBetweenInner}>
+        <CardReveal>
+          <section className={`${styles.ctaBetween} ${styles.ctaBetweenReverse}`}>
+          <div className={styles.ctaBetweenInner} style={{ flexDirection: 'row-reverse' }}>
             <div className={styles.ctaBetweenPanel}>
               <p className={styles.ctaBetweenText}>Хотите узнать стоимость для вашего объекта?</p>
               <a href="#contact" className={styles.ctaBetweenButton}>Оставить заявку</a>
@@ -504,6 +507,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        </CardReveal>
 
         {/* ===================== USP ===================== */}
         <section className={styles.uspSection}>
@@ -582,7 +586,8 @@ export default function HomePage() {
         </section>
 
         {/* ===================== CTA BETWEEN 3 ===================== */}
-        <section className={styles.ctaBetween}>
+        <CardReveal>
+          <section className={styles.ctaBetween}>
           <div className={styles.ctaBetweenInner}>
             <div className={styles.ctaBetweenImage}>
               <Image 
@@ -598,6 +603,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        </CardReveal>
 
         {/* ===================== CASES ===================== */}
         <section className={styles.casesSection} id="portfolio">

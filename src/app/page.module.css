@@ -1349,16 +1349,14 @@
   transform: scale(1.02);
 }
 
-section.ctaBetweenReverse .ctaBetweenInner {
-  flex-direction: row-reverse;
-}
+
 
 @media (max-width: 768px) {
   .ctaBetweenInner {
     flex-direction: column;
   }
-  .ctaBetweenReverse .ctaBetweenInner {
-    flex-direction: column;
+  .ctaBetweenReverse > div {
+    flex-direction: column !important;
   }
   .ctaBetweenImage {
     width: 100%;
