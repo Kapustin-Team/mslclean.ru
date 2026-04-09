@@ -310,14 +310,6 @@ export default function HomePage() {
               <h1 className={styles.heroTitle}>
                 <SplitText as="span" delay={0.2}>Чистота без управленческих забот</SplitText>
               </h1>
-              <motion.span
-                className={styles.heroDiscount}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
-              >
-                Скидка 10% для сетевых бизнесов и крупных объектов
-              </motion.span>
               
               {/* Content box */}
               <motion.div 
@@ -338,6 +330,10 @@ export default function HomePage() {
             </motion.div>
           </div>
         </section>
+
+        <div className={styles.heroDiscountStrip}>
+          <span>Скидка 10% для сетевых бизнесов и крупных объектов</span>
+        </div>
 
         {/* ===================== KEY FACTS ===================== */}
         <motion.section
