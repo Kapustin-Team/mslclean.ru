@@ -163,15 +163,15 @@
 }
 
 .heroDiscount {
-  border-color: #fff !important;
-  border-width: 2px !important;
-}
-
-.heroDiscount span {
-  color: #fff !important;
-  font-weight: 600 !important;
-  font-size: 0.95rem !important;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important;
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  padding: 8px 20px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 
 .heroButton {
