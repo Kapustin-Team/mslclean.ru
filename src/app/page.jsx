@@ -310,7 +310,7 @@ export default function HomePage() {
               <h1 className={styles.heroTitle}>
                 <SplitText as="span" delay={0.2}>Чистота без управленческих забот</SplitText>
               </h1>
-              <p className={styles.heroDiscount}>Скидка 10% для сетевых бизнесов и крупных объектов</p>
+              <p className={styles.heroDiscount}><SplitText as="span" delay={0.5}>Скидка 10% для сетевых бизнесов и крупных объектов</SplitText></p>
               
               {/* Content box */}
               <motion.div 
