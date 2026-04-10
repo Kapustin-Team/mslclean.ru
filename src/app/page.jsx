@@ -298,7 +298,7 @@ export default function HomePage() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             >
               <Image 
-                src="/images/hero-bg.jpg"
+                src="/images/banner-kitchen.jpg"
                 alt="Интерьер ресторана"
                 fill
                 priority
@@ -376,7 +376,7 @@ export default function HomePage() {
           >
             <div className={styles.bannerBkg}>
               <Image 
-                src="/images/banner-kitchen.jpg"
+                src="/images/hero-bg.jpg"
                 alt="Команда клининга за работой в ресторане"
                 fill
                 className={styles.bannerImage}
