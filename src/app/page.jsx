@@ -482,7 +482,7 @@ export default function HomePage() {
 
         {/* ===================== CTA BETWEEN 2 ===================== */}
         <CardReveal>
-          <section className={`${styles.ctaBetween} ${styles.ctaBetweenReverse}`}>
+          <section className={styles.ctaBetween}>
           <div className={styles.ctaBetweenInner}>
             <div className={styles.ctaBetweenPanel}>
               <p className={styles.ctaBetweenText}>Хотите узнать стоимость для вашего объекта?</p>
