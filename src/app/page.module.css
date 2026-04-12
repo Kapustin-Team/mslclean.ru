@@ -145,6 +145,7 @@
 }
 
 .heroDiscount {
+  text-transform: uppercase;
   position: absolute;
   top: 120px;
   left: 24px;
@@ -1050,6 +1051,7 @@
   }
 
   .heroDiscount {
+  text-transform: uppercase;
     top: 130px;
     left: 48px;
     font-size: 1.25rem;
