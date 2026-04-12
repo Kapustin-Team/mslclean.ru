@@ -611,11 +611,11 @@ export default function HomePage() {
                     <div className={styles.caseContent}>
                       <h3 className={styles.caseTitle}>{item.title}</h3>
                       <div className={styles.caseProblem}>
-                        <span className={styles.caseProblemLabel}>Проблема:</span>
+                        <span className={styles.caseProblemLabel}><AlertTriangle size={16} /> <span>Проблема:</span></span>
                         <p>{item.problem}</p>
                       </div>
                       <div className={styles.caseSolution}>
-                        <span className={styles.caseSolutionLabel}>Решение:</span>
+                        <span className={styles.caseSolutionLabel}><CheckCircle size={16} /> <span>Решение:</span></span>
                         <p>{item.solution}</p>
                       </div>
                       <div className={styles.caseResults}>
