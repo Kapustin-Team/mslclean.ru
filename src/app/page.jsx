@@ -15,7 +15,8 @@ import {
   Eye,
   Gift,
   ChevronDown,
-  AlertTriangle
+  AlertTriangle,
+  OctagonAlert
 } from 'lucide-react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -388,7 +389,7 @@ export default function HomePage() {
               {PROBLEMS.map((problem, index) => (
                 <CardReveal key={problem.num} delay={0.1 * index}>
                   <div className={styles.problemCard}>
-                    <div className={styles.problemNum}>{problem.num}</div>
+                    <div className={styles.problemIconWrap}><OctagonAlert size={18} className={styles.problemIcon} /></div>
                     <h3 className={styles.problemTitle}>{problem.title}</h3>
                     <ul className={styles.problemList}>
                       {problem.items.map((item, i) => (
