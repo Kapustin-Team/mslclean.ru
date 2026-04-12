@@ -141,7 +141,7 @@
   line-height: 1.1;
   color: white;
   letter-spacing: -0.01em;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .heroDiscount {
@@ -1159,7 +1159,8 @@
   }
 
   .heroTitle {
-    font-size: 1.75rem;
+    font-size: 1.35rem;
+    line-height: 1.2;
   }
 
   .caseResults {
@@ -1249,7 +1250,8 @@
 /* ===================== RESPONSIVE - SMALL MOBILE ===================== */
 @media (max-width: 479px) {
   .heroTitle {
-    font-size: 1.75rem;
+    font-size: 1.35rem;
+    line-height: 1.2;
   }
 
   .sectionTitle {
@@ -1375,7 +1377,7 @@
   font-weight: 600;
   border-radius: 999px;
   text-decoration: none;
-  white-space: nowrap;
+  white-space: normal;
   transition: background 0.2s, transform 0.2s;
 }
 
@@ -1822,7 +1824,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   margin-left: 16px;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .utpBannerButton:hover {
