@@ -23,6 +23,10 @@ import { MobileMenu } from '@/components/molecules'
 import { Logo } from '@/components/atoms'
 import { SplitText, AnimatedTag } from '@/components/atoms'
 import CookieBanner from '@/components/organisms/CookieBanner'
+import {
+  AlertTriangle,
+  CheckCircle,
+} from 'lucide-react';
 
 // FAQ компонент
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
