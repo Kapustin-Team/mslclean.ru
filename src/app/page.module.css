@@ -337,6 +337,20 @@
   background: white;
 }
 
+.problemsTag {
+  border-color: rgba(95, 123, 131, 0.28);
+}
+
+.problemsTag :global(.AnimatedTag_text),
+.problemsTag span {
+  color: #5f7b83;
+}
+
+.problemsTag svg {
+  color: #5f7b83;
+  vertical-align: middle;
+}
+
 .problemsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -344,8 +358,8 @@
 }
 
 .problemCard {
-  background: var(--color-accent-light);
-  border: 1px solid rgba(91, 188, 199, 0.3);
+  background: linear-gradient(180deg, #eef7f8 0%, #e8f0f2 100%);
+  border: 1px solid rgba(95, 123, 131, 0.2);
   border-radius: var(--radius-main);
   padding: 2rem;
   position: relative;
@@ -357,13 +371,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-accent);
+  background: #76b7c0;
   color: white;
   font-size: 1rem;
   font-weight: 600;
   border-radius: 50%;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(91, 188, 199, 0.35);
+  box-shadow: 0 4px 12px rgba(95, 123, 131, 0.22);
 }
 
 .problemTitle {
@@ -395,6 +409,19 @@
   background: white;
 }
 
+.solutionsTag {
+  border-color: rgba(18, 138, 167, 0.28);
+}
+
+.solutionsTag span {
+  color: #0f766e;
+}
+
+.solutionsTag svg {
+  color: #0f766e;
+  vertical-align: middle;
+}
+
 .solutionGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -409,8 +436,8 @@
   align-items: flex-start;
   text-align: left;
   border-radius: var(--radius-main);
-  background: var(--color-primary-light);
-  border: 1px solid rgba(31, 88, 102, 0.18);
+  background: linear-gradient(180deg, #eefcfd 0%, #dff7f8 100%);
+  border: 1px solid rgba(18, 138, 167, 0.22);
 }
 
 .solutionImageWrapper {

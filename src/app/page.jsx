@@ -15,7 +15,8 @@ import {
   Eye,
   Gift,
   ChevronDown,
-  AlertTriangle
+  AlertTriangle,
+  ShieldCheck
 } from 'lucide-react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -379,7 +380,11 @@ export default function HomePage() {
         <section className={styles.problemsSection} id="problems">
           <div className={styles.sectionPadding}>
             <div className={styles.sectionTop}>
-              <AnimatedTag>Проблемы</AnimatedTag>
+              <AnimatedTag className={styles.problemsTag}>
+                <>
+                  <AlertTriangle size={16} /> <span>Проблемы</span>
+                </>
+              </AnimatedTag>
               <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Это обходится вам дорого</SplitText>
               <SplitText as="p" className={styles.sectionSubtitle} delay={0.2}>Знакомо?</SplitText>
             </div>
@@ -426,7 +431,11 @@ export default function HomePage() {
         <section className={styles.solutionSection} id="services">
           <div className={styles.sectionPadding}>
             <div className={styles.sectionTop}>
-              <AnimatedTag>Решение</AnimatedTag>
+              <AnimatedTag className={styles.solutionsTag}>
+                <>
+                  <ShieldCheck size={16} /> <span>Решение</span>
+                </>
+              </AnimatedTag>
               <SplitText as="h2" className={styles.sectionTitle} delay={0.1}>Аутстафинг клинингового персонала</SplitText>
               <SplitText as="p" className={styles.sectionSubtitle} delay={0.2}>Мы берём всю ответственность на себя</SplitText>
             </div>
