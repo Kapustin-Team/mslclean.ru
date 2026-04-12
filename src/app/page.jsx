@@ -219,39 +219,39 @@ const STEPS = [
 
 const CASES = [
   {
-    title: 'DDX Fitness',
-    type: 'Сеть фитнес-клубов',
+    title: '',
+    type: 'Популярная федеральная сеть',
     image: '/images/case-ddx.jpg',
-    problem: 'Постоянная текучка клинеров, задержки с заменами, жалобы посетителей на чистоту',
-    solution: 'Вывели команду из 12 клинеров на 4 объекта. Закрепили менеджера за каждым клубом.',
+    problem: 'Не соблюдаются стандарты чистоты, страдает репутация, потеря клиентов',
+    solution: 'Выполнение всех правил и стандартов клуба, стабильный обученный персонал, отсутствие жалоб',
     results: [
-      { label: 'Объектов', value: '4' },
-      { label: 'Клинеров', value: '12' },
-      { label: 'Время замены', value: '2 ч' },
+      { label: 'Стандарты', value: '100%' },
+      { label: 'Персонал', value: 'Обучен' },
+      { label: 'Жалобы', value: '0' },
     ],
   },
   {
-    title: 'Салатница',
-    type: 'Сеть ресторанов',
+    title: '',
+    type: 'Растущая сеть ресторанов',
     image: '/images/case-salatnica.jpg',
-    problem: 'Нестабильное качество уборки, проблемы с оформлением персонала, переплаты наличными',
-    solution: 'Перевели на аутстаффинг, стандартизировали процессы, внедрили контроль качества.',
+    problem: 'Постоянный поиск сотрудников, обучение новых клинеров',
+    solution: 'Стабильный обученный штат с медкнижками и полным пакетом документов, замены при необходимости, безналичный расчёт по фиксированной цене',
     results: [
-      { label: 'Точек', value: '6' },
-      { label: 'Экономия', value: '30%' },
-      { label: 'Жалоб', value: '0' },
+      { label: 'Штат', value: 'Стабильный' },
+      { label: 'Документы', value: 'Полные' },
+      { label: 'Замены', value: 'Да' },
     ],
   },
   {
-    title: 'Национальный центр «Россия»',
-    type: 'ВДНХ, гастрономические ряды',
+    title: '',
+    type: 'Крупный государственный объект / фудмол',
     image: '/images/case-ncrussia.jpg',
-    problem: 'Масштабный объект с высоким трафиком, сложная логистика персонала',
-    solution: 'Организовали посменную работу 24/7, обеспечили бесперебойный клининг гастрономических рядов.',
+    problem: 'Крупный фудмол, большой штат 13 человек, САНПИН нормы, повышенная важность',
+    solution: 'Соблюдение всех требований, бесперебойная работа, усиление день в день при необходимости',
     results: [
       { label: 'Площадь', value: '3000 м²' },
       { label: 'Смены', value: '24/7' },
-      { label: 'Персонал', value: '8 чел' },
+      { label: 'Персонал', value: '13 чел' },
     ],
   },
 ]
@@ -703,8 +703,8 @@ export default function HomePage() {
                     <span className={styles.contactHint}>Ежедневно 8:00–23:00</span>
                   </div>
                   <p className={styles.contactAlt}>Не любите звонить? Напишите на email</p>
-                  <a href="mailto:info@mslclean.ru" className={styles.emailLink}>
-                    info@mslclean.ru
+                  <a href="mailto:msl-clean@mail.ru" className={styles.emailLink}>
+                    msl-clean@mail.ru
                   </a>
                 </div>
                 <div className={styles.contactRight}>
@@ -790,8 +790,8 @@ export default function HomePage() {
 
               {/* Big Email + Phone */}
               <div className={styles.footerContactRow}>
-                <a href="mailto:info@mslclean.ru" className={styles.footerBigContact}>
-                  info@mslclean.ru
+                <a href="mailto:msl-clean@mail.ru" className={styles.footerBigContact}>
+                  msl-clean@mail.ru
                 </a>
                 <a href="tel:+79661155450" className={styles.footerBigContact}>
                   +7 (966) 115-54-50
