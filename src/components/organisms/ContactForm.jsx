@@ -68,7 +68,6 @@ export default function ContactForm({ className = '' }) {
         {isSubmitting ? 'Отправка...' : 'Отправить заявку'}
       </Button>
       
-      <p className={styles.hint}>Ответим в течение 10 минут</p>
     </form>
   )
 }
