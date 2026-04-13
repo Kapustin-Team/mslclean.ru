@@ -38,7 +38,7 @@ export default function ContactForm({ className = '', variant = 'default' }) {
 
   return (
     <form className={[styles.form, className].filter(Boolean).join(' ')} onSubmit={handleSubmit}>
-      <h3 className={styles.title}>Получить бесплатный расчёт</h3>
+      {!isDetailed && <h3 className={styles.title}>Получить бесплатный расчёт</h3>}
       
       <div className={styles.fields}>
         {isDetailed ? (

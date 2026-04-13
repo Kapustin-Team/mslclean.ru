@@ -12,7 +12,7 @@
 
 .modal {
   position: relative;
-  width: min(1080px, 100%);
+  width: min(760px, 100%);
   max-height: min(90vh, 920px);
   overflow: auto;
   border-radius: 32px;
@@ -36,20 +36,20 @@
 }
 
 .content {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
-  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
   padding: 56px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .copy {
-  max-width: 520px;
+  max-width: 100%;
 }
 
 .title {
-  margin: 0 0 18px;
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.05;
   color: var(--color-primary-dark);
 }
@@ -62,15 +62,14 @@
 }
 
 .formWrap :global(form) {
-  background: rgba(255, 255, 255, 0.78);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.86);
   border: 1px solid rgba(31, 88, 102, 0.1);
   box-shadow: 0 20px 50px rgba(31, 88, 102, 0.12);
 }
 
 @media (max-width: 900px) {
   .content {
-    grid-template-columns: 1fr;
-    gap: 28px;
     padding: 56px 24px 24px;
   }
 
