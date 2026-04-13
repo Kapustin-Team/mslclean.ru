@@ -62,6 +62,7 @@ export default function ContactForm({ className = '' }) {
       
       <Button 
         type="submit" 
+        variant="secondary"
         fullWidth 
         disabled={isSubmitting}
       >
