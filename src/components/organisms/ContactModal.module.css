@@ -1,0 +1,121 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(12, 32, 37, 0.56);
+  backdrop-filter: blur(10px);
+}
+
+.modal {
+  position: relative;
+  width: min(1080px, 100%);
+  max-height: min(90vh, 920px);
+  overflow: auto;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #f8fcfc 0%, #edf7f7 100%);
+  border: 1px solid rgba(31, 88, 102, 0.12);
+  box-shadow: 0 30px 80px rgba(10, 40, 48, 0.24);
+}
+
+.closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(31, 88, 102, 0.12);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary-dark);
+  cursor: pointer;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  gap: 40px;
+  padding: 56px;
+  align-items: center;
+}
+
+.copy {
+  max-width: 520px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin: 0 0 18px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 88, 102, 0.16);
+  color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.64);
+  font-size: 0.875rem;
+}
+
+.title {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  color: var(--color-primary-dark);
+}
+
+.text {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  margin-top: 28px;
+}
+
+.formWrap :global(form) {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(31, 88, 102, 0.1);
+  box-shadow: 0 20px 50px rgba(31, 88, 102, 0.12);
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 56px 24px 24px;
+  }
+
+  .copy {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .overlay {
+    padding: 12px;
+    align-items: flex-end;
+  }
+
+  .modal {
+    width: 100%;
+    max-height: 92vh;
+    border-radius: 24px 24px 0 0;
+  }
+
+  .closeButton {
+    top: 16px;
+    right: 16px;
+  }
+
+  .content {
+    padding: 52px 18px 18px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

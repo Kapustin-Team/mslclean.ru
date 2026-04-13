@@ -8,7 +8,7 @@ import styles from './ContactForm.module.css'
  * Организм: ContactForm
  * Форма обратной связи
  */
-export default function ContactForm() {
+export default function ContactForm({ className = '' }) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
 
@@ -34,7 +34,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={[styles.form, className].filter(Boolean).join(' ')} onSubmit={handleSubmit}>
       <h3 className={styles.title}>Получить бесплатный расчёт</h3>
       
       <div className={styles.fields}>

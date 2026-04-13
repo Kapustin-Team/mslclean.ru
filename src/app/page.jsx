@@ -25,6 +25,7 @@ import { MobileMenu } from '@/components/molecules'
 import { Logo } from '@/components/atoms'
 import { SplitText, AnimatedTag } from '@/components/atoms'
 import CookieBanner from '@/components/organisms/CookieBanner'
+import ContactModal from '@/components/organisms/ContactModal'
 
 // FAQ компонент
 const FAQItem = ({ question, answer, isOpen, onClick }) => (
@@ -251,6 +252,11 @@ const PORTFOLIO = CASES
 
 export default function HomePage() {
   const [openFaq, setOpenFaq] = useState(null)
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false)
+
+  const openContactModal = () => setIsContactModalOpen(true)
+  const closeContactModal = () => setIsContactModalOpen(false)
+
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.pageBody}>
@@ -417,7 +423,7 @@ export default function HomePage() {
               </div>
               <div className={styles.ctaBetweenPanel}>
                 <p className={styles.ctaBetweenText}>Готовы избавиться от проблем с персоналом?</p>
-                <a href="#contact" className={styles.ctaBetweenButton}>Получить расчёт</a>
+                <button type="button" className={styles.ctaBetweenButton} onClick={openContactModal}>Получить расчёт</button>
               </div>
             </div>
           </section>
@@ -476,7 +482,7 @@ export default function HomePage() {
           <div className={styles.ctaBetweenInner}>
             <div className={styles.ctaBetweenPanel}>
               <p className={styles.ctaBetweenText}>Хотите узнать стоимость для вашего объекта?</p>
-              <a href="#contact" className={styles.ctaBetweenButton}>Оставить заявку</a>
+              <button type="button" className={styles.ctaBetweenButton} onClick={openContactModal}>Оставить заявку</button>
             </div>
             <div className={styles.ctaBetweenImage}>
               <Image 
@@ -580,7 +586,7 @@ export default function HomePage() {
             </div>
             <div className={styles.ctaBetweenPanel}>
               <p className={styles.ctaBetweenText}>Узнайте, как мы можем помочь вашему бизнесу</p>
-              <a href="#contact" className={styles.ctaBetweenButton}>Связаться с нами</a>
+              <button type="button" className={styles.ctaBetweenButton} onClick={openContactModal}>Связаться с нами</button>
             </div>
           </div>
         </section>
@@ -801,6 +807,7 @@ export default function HomePage() {
           </footer>
         </section>
       </div>
+      <ContactModal isOpen={isContactModalOpen} onClose={closeContactModal} />
       <CookieBanner />
     </div>
   )
