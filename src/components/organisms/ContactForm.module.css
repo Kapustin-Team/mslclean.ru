@@ -54,6 +54,19 @@
   text-decoration: underline;
 }
 
+.submitButton {
+  min-height: 56px;
+  border-radius: 999px;
+  background: var(--color-primary) !important;
+  color: var(--color-white) !important;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.submitButton:hover:not(:disabled) {
+  background: var(--color-primary-dark) !important;
+}
+
 /* Success State */
 .success {
   background: white;
