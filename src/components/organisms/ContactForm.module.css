@@ -18,11 +18,40 @@
   margin-bottom: 24px;
 }
 
-.hint {
-  text-align: center;
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
   font-size: 0.875rem;
-  color: var(--text-muted);
-  margin-top: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 24px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.checkbox input {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.checkboxLink {
+  color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* Success State */

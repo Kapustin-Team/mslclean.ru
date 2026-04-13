@@ -44,7 +44,7 @@ export default function ContactModal({ isOpen, onClose }) {
             <p className={styles.text}>Оставьте заявку, и мы свяжемся с вами в течение 10 минут.</p>
           </div>
 
-          <ContactForm className={styles.formWrap} />
+          <ContactForm className={styles.formWrap} variant="detailed" />
         </div>
       </div>
     </div>
